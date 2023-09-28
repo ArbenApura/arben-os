@@ -1,0 +1,31 @@
+<script lang="ts">
+	import { Tooltip as TooltipPrimitive } from 'bits-ui';
+	import { cn, flyAndScale } from '$lib/utils';
+
+	type $$Props = TooltipPrimitive.ContentProps & {
+		sideOffset?: number;
+	};
+
+	let className: $$Props['class'] = undefined;
+	export let sideOffset: $$Props['sideOffset'] = 4;
+	export let transition: $$Props['transition'] = flyAndScale;
+	export let transitionConfig: $$Props['transitionConfig'] = {
+		y: 8,
+		duration: 150,
+	};
+	export { className as class };
+</script>
+
+<TooltipPrimitive.Content
+	{transition}
+	{transitionConfig}
+	{sideOffset}
+	class={cn(
+		'z-50 overflow-hidden rounded-md border bg-popover px-3 py-1.5 text-sm text-popover-foreground shadow-md',
+		'opacity-90',
+		className,
+	)}
+	{...$$restProps}
+>
+	<slot />
+</TooltipPrimitive.Content>

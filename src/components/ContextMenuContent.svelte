@@ -3,7 +3,7 @@
 	import { ContextMenu } from '$lib';
 </script>
 
-<ContextMenu.Content class="w-full max-w-[250px] opacity-[.90] [&>*]:whitespace-nowrap">
+<ContextMenu.Content class="w-full max-w-[250px] opacity-90 [&>*]:whitespace-nowrap">
 	<ContextMenu.Sub>
 		<ContextMenu.SubTrigger>
 			<i class="ph ph-squares-four" />

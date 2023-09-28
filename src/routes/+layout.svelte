@@ -6,7 +6,8 @@
 	import { onMount } from 'svelte';
 	// IMPORTED COMPONENTS
 	import { ContextMenu } from '$lib';
-	import { ContextMenuContent } from '$components';
+	import { ContextMenuContent, Taskbar } from '$components';
+	import DeviceStatesWrapper from '$components/DeviceStatesWrapper.svelte';
 
 	// UTILS
 	const handleResize = () => windowWidth.set(window.innerWidth);
@@ -20,6 +21,8 @@
 
 <svelte:window on:resize={handleResize} />
 
+<DeviceStatesWrapper />
+
 <ContextMenu.Root>
 	<ContextMenu.Trigger>
 		<div
@@ -30,4 +33,10 @@
 		</div>
 	</ContextMenu.Trigger>
 	<ContextMenuContent />
+</ContextMenu.Root>
+
+<ContextMenu.Root>
+	<ContextMenu.Trigger>
+		<Taskbar />
+	</ContextMenu.Trigger>
 </ContextMenu.Root>

@@ -9,7 +9,10 @@
 		-webkit-tap-highlight-color: transparent;
 	}
 	html {
-		font-size: 16px;
+		font-size: 14px;
+	}
+	body {
+		@apply overflow-hidden;
 	}
 	h1 {
 		@apply text-4xl font-extrabold;

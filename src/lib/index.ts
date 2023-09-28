@@ -1,1 +1,5 @@
-// place files you want to import through the `$lib` alias in this folder.
+// IMPORTED COMPONENTS
+import * as ContextMenu from '$lib/components/ui/context-menu';
+
+// EXPORTED COMPONENTS
+export { ContextMenu };

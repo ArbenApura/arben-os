@@ -1,2 +1,8 @@
 // IMPORTED STYLES
 @import './tailwindcss.scss';
+@import './shadcn.scss';
+@import './utils.scss';
+
+.ph {
+	@apply text-xl;
+}
